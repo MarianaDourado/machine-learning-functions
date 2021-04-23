@@ -5,10 +5,7 @@ def sigmoid(x):
 # Output (prediction) formula
 def output_formula(features, weights, bias):
     return sigmoid(np.dot(weights, features) + bias) 
-"""
-np.dot = Dot product of two arrays.
-why not np.dot(features, weights) ?
-"""
+
 # Error (log-loss) formula
 def error_formula(y, output):
     return np.dot(-y, np.log(output))-np.dot((1-y), np.log(1-output)) 
